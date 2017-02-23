@@ -13,6 +13,7 @@ var project = require('./routes/project');
 // Example route
 // var user = require('./routes/user');
 
+
 var app = express();
 
 // all environments
@@ -38,6 +39,9 @@ if ('development' == app.get('env')) {
 // Add routes here
 app.get('/', index.view);
 app.get('/project/:id', project.view);
+app.get('/min', index.viewMin);
+
+
 // Example route
 // app.get('/users', user.list);
 
